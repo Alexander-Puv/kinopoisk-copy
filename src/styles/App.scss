@@ -1,0 +1,28 @@
+:root {
+  --primary-color: #f50;
+  /* --header-opacity: .6;
+  --header-hover-opacity: .9;
+  --primary-gray-color: #ffffff99; */
+  --primary-background: #1f1f1f;
+  --content-background: #141414;
+  --primary-trans: 300ms ease;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.App {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
