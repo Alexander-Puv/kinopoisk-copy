@@ -5,20 +5,29 @@
   left: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 60px;
   background-color: var(--primary-background);
   transform: translateY(-7.2rem);
   transition: var(--primary-trans);
   
-  &.visible {
+  &.visible,
+  &.top,
+  &.mainTop {
     transform: translateY(0);
   }
 
   &.mainTop {
     background: linear-gradient(180deg, rgba(0, 0, 0, .6), transparent);
-    transform: translateY(0);
   }
+
+  a, button {
+    opacity: .6;
+    transition: var(--primary-trans);
+    &:hover {
+      opacity: .9;
+    }
+  }
+
 
 
   .navigation_menu {
@@ -29,18 +38,89 @@
     nav {
       position: absolute;
     }
+
+    a {
+      opacity: 1;
+    }
+
+    .menu {
+      cursor: default;
+    }
   }
 
 
 
   .content_wrapper {
+    flex: 1;
+    margin: 0 3.8rem 0 6.4rem;
     display: flex;
+    justify-content: center;
+
     nav {
       display: flex;
       font-size: 1.8rem;
-      li {
-        height: 2.2rem;
-        margin-right: 3.2rem;
+
+      a {
+        line-height: 2.2rem;
+        margin: 2.4rem 3.2rem 1.2rem 0;
+        padding-bottom: 1.2rem;
+        border-bottom: .2rem solid transparent;
+
+        &.active {
+          border-color: var(--primary-color);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+
+
+  .avatar_wrapper {
+    flex: 0 1 15%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .img,
+    .img * {
+      width: 2.4rem;
+      height: 2.4rem;
+      
+      &.smart_tv {
+        margin-right: 1.6rem;
+      }
+      
+      &.child {
+        margin-right: 2rem;
+        cursor: pointer;
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .user {
+    display: flex;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &.plus_user {
+        padding: 0.4rem;
+        background-image: url(https://yastatic.net/s3/kinopoisk-frontend/hd-www/release/_next/static/media/border-plus.51fee831.svg);
+      }
+
+      .avatar {
+        width: 4rem;
+        height: 4rem;
+        background-image: url(https://yastatic.net/s3/kinopoisk-frontend/hd-www/release/_next/static/media/avatar-old.a4fbefa9.svg);
+        background-size: cover;
+        border-radius: 50%;
       }
     }
   }
