@@ -2,12 +2,10 @@
 
 :root {
   --primary-color: #f50;
-  /* --header-opacity: .6;
-  --header-hover-opacity: .9;
-  GraphikKinopoisk,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif
-  --primary-gray-color: #ffffff99; */
-  --primary-background: #1f1f1f;
-  --content-background: #141414;
+  --primary-bg: #1f1f1f;
+  --content-bg: #141414;
+  --menu-bg: #333;
+  --icon-size: 2.4rem;
   --primary-trans: 300ms ease;
 }
 
@@ -18,9 +16,12 @@
 }
 
 a {
-  display: flex;
   text-decoration: none;
   color: white;
+}
+
+a, button {
+  display: flex;
 }
 
 svg {
@@ -48,12 +49,24 @@ html {
 .App {
   max-width: 100vw;
   width: 100%;
-  min-height: 200vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 main {
   flex: 1;
-  background-color: var(--content-background);
+  background-color: var(--content-bg);
+}
+
+@media (min-width: 1444px) {
+  html {
+    font-size: .694444vw;
+  }
+}
+
+@media (min-width: 1681px) {
+  html {
+    font-size: .694444vw;
+  }
 }
