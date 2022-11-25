@@ -1,14 +1,11 @@
 import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { BuyRoute, ChannelsRoute, MainRoute, PersonalRoute, SportRoute } from '../routing/routes';
 import cl from '../styles/componentStyles/Header.module.scss';
+import UserMenu from './UserMenu';
 
 const Header = () => {
-  const [activeRoute, setActiveRoute] = useState(location.pathname);
-
-  const changeActiveRoute = (path: string) => {
-    setActiveRoute(path)
-  }
+  const loc = useLocation();
 
   const [userPosition, setUserPosition] = useState(scrollY);
   const [oldUserPosition, setOldUserPosition] = useState(userPosition);
@@ -21,11 +18,11 @@ const Header = () => {
     return (oldUserPosition - userPosition > 0);
   }, [userPosition])
   const isHeaderOnTop = useMemo(() => {
-    if (location.pathname === '/') {
+    if (loc.pathname === '/') {
       return userPosition === 0 ? cl.mainTop : ''
     }
     return userPosition === 0 ? cl.top : ''
-  }, [location.pathname, userPosition])
+  }, [loc.pathname, userPosition])
   
   return (
     <header className={`${cl.header} ${isHeaderVisible ? cl.visible : ''} ${isHeaderOnTop}`}>
@@ -84,36 +81,31 @@ const Header = () => {
         <nav>
           <Link 
             to={MainRoute}
-            className={activeRoute === MainRoute ? cl.active : ''}
-            onClick={() => changeActiveRoute(MainRoute)}
+            className={loc.pathname === MainRoute ? cl.active : ''}
           >
             Главное
           </Link>
           <Link 
             to={BuyRoute}
-            className={activeRoute === BuyRoute ? cl.active : ''}
-            onClick={() => changeActiveRoute(BuyRoute)}
+            className={loc.pathname === BuyRoute ? cl.active : ''}
           >
             Магазин
           </Link>
           <Link
             to={PersonalRoute}
-            className={activeRoute === PersonalRoute ? cl.active : ''}
-            onClick={() => changeActiveRoute(PersonalRoute)}
+            className={loc.pathname === PersonalRoute ? cl.active : ''}
           >
             Моё
           </Link>
           <Link
             to={ChannelsRoute}
-            className={activeRoute === ChannelsRoute ? cl.active : ''}
-            onClick={() => changeActiveRoute(ChannelsRoute)}
+            className={loc.pathname === ChannelsRoute ? cl.active : ''}
           >
             Телеканалы
           </Link>
           <Link
             to={SportRoute}
-            className={activeRoute === SportRoute ? cl.active : ''}
-            onClick={() => changeActiveRoute(SportRoute)}
+            className={loc.pathname === SportRoute ? cl.active : ''}
           >
             Спорт
           </Link>
@@ -144,15 +136,7 @@ const Header = () => {
             </svg>
             <span>0</span>
           </div>
-          <div className={cl.user_menu}>
-            <div className={cl.menu_section + ' ' + cl.user_section}>
-              <div className={cl.user_items}>
-                <span className={cl.user_name}>User</span>
-                <span className={cl.email}>User@yandex.ru</span>
-              </div>
-              <div></div>
-            </div>
-          </div>
+          <UserMenu className={cl.user_menu} />
         </div>
       </div>
     </header>

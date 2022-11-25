@@ -1,0 +1,134 @@
+.user_menu {
+  position: absolute;
+  top: -1.2rem;
+  right: -2.4rem;
+  width: 30rem;
+  min-height: 20rem; // delete
+  background-color: var(--menu-bg);
+  border-radius: 0 0 .8rem .8rem;
+  box-shadow: 0 3.4rem 2.5rem rgb(0 0 0 / 12%), 0 1.2rem 3.2rem rgb(0 0 0 / 16%), 0 5rem 5.6rem rgb(0 0 0 / 24%);
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--primary-trans);
+
+  --avatar-size: 2.8rem;
+
+  a {
+    opacity: 1;
+  }
+
+  span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    opacity: .6;
+    transition: var(--primary-trans);
+  }
+
+
+
+  .menu_section {
+    padding: 0.8rem 0;
+    
+    &.user_section {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem 2.4rem 0;
+
+      * {
+        cursor: pointer;
+      }
+
+      .user_items {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+
+        .user_name {
+          font-size: 1.8rem;
+          opacity: 1;
+        }
+
+        .email {
+          font-size: 1.3rem;
+          opacity: .3;
+        }
+      }
+
+      .user_wrap {
+        margin-left: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        &.plus_user {
+          padding: 0.4rem;
+          background-image: url(https://yastatic.net/s3/kinopoisk-frontend/hd-www/release/_next/static/media/border-plus.51fee831.svg);
+          background-size: 100%;
+        }
+  
+        .avatar {
+          width: 4rem;
+          height: 4rem;
+          background-image: url(https://yastatic.net/s3/kinopoisk-frontend/hd-www/release/_next/static/media/avatar-old.a4fbefa9.svg);
+          background-size: cover;
+          background-color: hsla(0, 0%, 100%, 0.2);
+          border-radius: 50%;
+        }
+      }
+      
+      &:hover .user_name {
+        opacity: .8;
+      }
+    }
+
+
+
+    .item {
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 0.2rem 2.4rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: var(--primary-trans);
+
+      &.child_item {
+        height: 4.6rem;
+      }
+
+      .img {
+        display: flex;
+        img {
+          width: var(--avatar-size);
+          height: var(--avatar-size);
+          border-radius: 50%;
+        }
+      }
+
+      .child {
+        display: flex;
+        flex-direction: column;
+        :nth-child(2) {
+          font-size: 1.2rem;
+          opacity: .4;
+        }
+      }
+
+      &:hover {
+        background-color: var(--menu-bg-hover);
+        span {
+          opacity: .9;
+        }
+      }
+    }
+
+    .other_users {
+      padding: 0.6rem 2.4rem 1.2rem;
+      font-size: 1.3rem;
+      font-weight: 500;
+      opacity: .6;
+    }
+  }
+}
