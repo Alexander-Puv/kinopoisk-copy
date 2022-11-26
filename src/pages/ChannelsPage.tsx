@@ -2,7 +2,9 @@ import React from 'react'
 
 const ChannelsPage = () => {
   return (
-    <div>ChannelsPage</div>
+    <main className='page'>
+      
+    </main>
   )
 }
 

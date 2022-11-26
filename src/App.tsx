@@ -5,20 +5,21 @@ import Header from './components/Header';
 import { AppContext } from './context/context';
 import AppRouter from './routing/AppRouter';
 import './styles/App.scss';
+import './styles/Pages.scss';
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
   return (
     <AppContext.Provider value={{
-      isAuth, setIsAuth
+      isAuth, setIsAuth,
+      isSubscribed, setIsSubscribed
     }}>
       <BrowserRouter>
         <div className="App">
           <Header />
-            <main>
-              <AppRouter />
-            </main>
+            <AppRouter />
           <Footer />
         </div>
       </BrowserRouter>

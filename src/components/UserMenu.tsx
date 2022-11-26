@@ -1,13 +1,16 @@
 import React, { FC } from 'react'
 import { Link } from 'react-router-dom'
+import { noImg } from '../assets/noImg'
 import { HistoryRoute } from '../routing/routes'
 import cl from '../styles/componentStyles/UserMenu.module.scss'
+import UserItem from './UI/UserItem'
 
 interface UserMenuProps {
   className?: string
 }
 
 const UserMenu: FC<UserMenuProps> = ({className}) => {
+  
   return (
     <div className={cl.user_menu + ` ${className}`}>
       <section className={cl.menu_section + ' ' + cl.user_section}>
@@ -16,7 +19,7 @@ const UserMenu: FC<UserMenuProps> = ({className}) => {
           <span className={cl.email}>User@yandex.ru</span>
         </div>
         <div className={cl.user_wrap + ' ' + cl.plus_user}>
-          <div className={cl.avatar}></div>
+          <div className={cl.avatar} style={{backgroundImage: `url(${noImg})`}}></div>
         </div>
       </section>
 
@@ -49,13 +52,18 @@ const UserMenu: FC<UserMenuProps> = ({className}) => {
       </section>
 
       <section className={cl.menu_section}>
-        <Link to={HistoryRoute} className={cl.item}><span>История просмотра</span></Link>
+        <div className={cl.item}><span>Выйти</span></div>
       </section>
 
-      <section className={cl.menu_section}>
+      <section className={cl.menu_section + ` ${cl.users_section}`}>
         <h3 className={cl.other_users}>Другие пользователи</h3>
-        <Link to={'/'} className={cl.item}><span>User@yandex.ru</span></Link>
-        <Link to={'/'} className={cl.item}><span>Добавить пользователя</span></Link>
+        <UserItem cl={cl} text={'User@yandex.ru'} link={'/'} />
+        <UserItem
+          cl={cl}
+          text={'Добавить пользователя'}
+          link={'/'}
+          img={'https://yastatic.net/s3/kinopoisk-frontend/hd-www/release/_next/static/media/add-account-old.7435cf78.svg'}
+        />
       </section>
     </div>
   )

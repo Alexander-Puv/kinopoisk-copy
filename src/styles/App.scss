@@ -55,18 +55,7 @@ html {
   flex-direction: column;
 }
 
-main {
-  flex: 1;
-  background-color: var(--content-bg);
-}
-
 @media (min-width: 1444px) {
-  html {
-    font-size: .694444vw;
-  }
-}
-
-@media (min-width: 1681px) {
   html {
     font-size: .694444vw;
   }

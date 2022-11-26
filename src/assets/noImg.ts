@@ -1,0 +1,1 @@
+export const noImg = 'https://yastatic.net/s3/kinopoisk-frontend/hd-www/release/_next/static/media/avatar-old.a4fbefa9.svg'

@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { noImg } from '../assets/noImg';
 import { BuyRoute, ChannelsRoute, MainRoute, PersonalRoute, SportRoute } from '../routing/routes';
 import cl from '../styles/componentStyles/Header.module.scss';
 import UserMenu from './UserMenu';
@@ -128,7 +129,7 @@ const Header = () => {
         </div>
         <div className={cl.user}>
           <div className={cl.user_wrap + ' ' + cl.plus_user}>
-            <div className={cl.avatar}></div>
+            <div className={cl.avatar} style={{backgroundImage: `url(${noImg})`}}></div>
           </div>
           <div className={cl.points}>
             <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="none">
