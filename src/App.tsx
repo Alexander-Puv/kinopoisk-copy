@@ -10,11 +10,13 @@ import './styles/Pages.scss';
 function App() {
   const [isAuth, setIsAuth] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isPromoBlock, setIsPromoBlock] = useState(false);
 
   return (
     <AppContext.Provider value={{
       isAuth, setIsAuth,
-      isSubscribed, setIsSubscribed
+      isSubscribed, setIsSubscribed,
+      isPromoBlock, setIsPromoBlock,
     }}>
       <BrowserRouter>
         <div className="App">

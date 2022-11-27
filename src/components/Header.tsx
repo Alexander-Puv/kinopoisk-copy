@@ -1,6 +1,7 @@
-import { useMemo, useState } from 'react';
+import { useContext, useMemo, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { noImg } from '../assets/noImg';
+import { AppContext } from '../context/context';
 import { BuyRoute, ChannelsRoute, MainRoute, PersonalRoute, SportRoute } from '../routing/routes';
 import cl from '../styles/componentStyles/Header.module.scss';
 import UserMenu from './UserMenu';
@@ -10,6 +11,7 @@ const Header = () => {
 
   const [userPosition, setUserPosition] = useState(scrollY);
   const [oldUserPosition, setOldUserPosition] = useState(userPosition);
+  const context = useContext(AppContext);
   window.addEventListener('scroll', () => setUserPosition(scrollY))
 
   useMemo(() => {
@@ -19,11 +21,11 @@ const Header = () => {
     return (oldUserPosition - userPosition > 0);
   }, [userPosition])
   const isHeaderOnTop = useMemo(() => {
-    if (loc.pathname === '/') {
-      return userPosition === 0 ? cl.mainTop : ''
+    if (context?.isPromoBlock === true) {
+      return userPosition === 0 ? cl.promo_block : ''
     }
     return userPosition === 0 ? cl.top : ''
-  }, [loc.pathname, userPosition])
+  }, [context?.isPromoBlock, userPosition])
   
   return (
     <header className={`${cl.header} ${isHeaderVisible ? cl.visible : ''} ${isHeaderOnTop}`}>

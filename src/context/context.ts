@@ -1,10 +1,14 @@
 import { createContext } from "react";
 
+type setBool = (isAuth: boolean) => void
+
 interface AppContextElements {
   isAuth: boolean,
-  setIsAuth: (isAuth: boolean) => void,
+  setIsAuth: setBool,
   isSubscribed: boolean,
-  setIsSubscribed: (isAuth: boolean) => void,
+  setIsSubscribed: setBool,
+  isPromoBlock: boolean,
+  setIsPromoBlock: setBool,
 }
 
 export const AppContext = createContext<AppContextElements | null>(null);

@@ -1,13 +1,18 @@
-import React from 'react'
 import Carousel from '../components/UI/Carousel'
-import cl from '../styles/pagesStyles/MainPage.module.scss'
+import PromoBlock from '../components/UI/PromoBlock'
+import mainPromo from '../assets/promo/mainPromo'
 
 const MainPage = () => {
   return (
     <main className='page main_page'>
-      <section></section>
+      <PromoBlock
+        img={mainPromo.img}
+        logo={mainPromo.logo}
+        description={mainPromo.description}
+        link={mainPromo.link}
+      />
       <Carousel>
-        
+
       </Carousel>
     </main>
   )

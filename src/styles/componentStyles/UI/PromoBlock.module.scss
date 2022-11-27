@@ -1,0 +1,105 @@
+.promo_block {
+  position: relative;
+  width: 100%;
+  height: 87vh;
+
+
+
+  .img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+
+
+  .desc {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+
+    .desc__content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+
+      .logo {
+        margin: 0 auto 1.6rem;
+        font-size: 7.6rem;
+        line-height: 9.6rem;
+        img {
+          width: 100%;
+          height: 14.8rem;
+        }
+      }
+
+      p {
+        width: 63.6rem;
+        margin: 0 auto;
+        font-size: 2.4rem;
+        line-height: 3.4rem;
+        text-align: center;
+      }
+    }
+  }
+
+
+
+  .btns_container {
+    position: absolute;
+    bottom: 3.5rem;
+    left: 6rem;
+    display: flex;
+    gap: 1.2rem;
+    z-index: 100;
+
+    button {
+      height: 4.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-align: center;
+      white-space: nowrap;
+      font-size: 1.5rem;
+      background-color: var(--btn-bg-color);
+      border-radius: .4rem;
+      transition: transform var(--primary-trans);
+      will-change: transform;
+
+      &.big_btns {
+        padding: 0 2.5rem 0 1.6rem;
+      }
+
+      &.watch {
+        background-color: var(--primary-color) !important;
+
+      }
+
+      &.small_btns {
+        padding: 0 1.4rem;
+      }
+
+      &:hover {
+        background-color: var(--gray);
+        transform: scale(1.05);
+      }
+    }
+  }
+
+
+
+  .movie_link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+}
