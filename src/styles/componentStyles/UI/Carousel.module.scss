@@ -1,0 +1,53 @@
+.main_container {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    display: flex;
+    align-items: center;
+    margin: 2.4rem 6rem 0.2rem;
+    
+    h3 {
+      color: white;
+      font-size: 2.2rem;
+      line-height: 2.8rem;
+      font-weight: 500;
+      opacity: .9;
+    }
+
+    svg {
+      opacity: 0;
+      margin-top: 0.2rem;
+      margin-left: 0.4rem;
+      transition: var(--small-trans);
+    }
+  }
+
+  .window {
+    .all_pages_container {
+      display: flex;
+      padding: 1.6rem 0;
+      overflow: hidden;
+  
+      .item {
+        width: calc((100% - 12rem - .8rem * (var(--item-size) - 1)) / var(--item-size));
+        height: 56.25%; // ????????
+        margin-left: .8rem;
+  
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+  
+      &::before,
+      &::after {
+        content: "";
+        width: 6rem;
+      }
+    }
+  }
+
+  &:hover .title svg {
+    opacity: .8;
+  }
+}

@@ -11,8 +11,13 @@ const MainPage = () => {
         description={mainPromo.description}
         link={mainPromo.link}
       />
-      <Carousel>
-
+      <Carousel title='Рекомендуем сериалы' link='/'>
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Item 6</div>
       </Carousel>
     </main>
   )

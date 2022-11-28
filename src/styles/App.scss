@@ -8,7 +8,17 @@
   --menu-bg-hover: rgba(68,68,68,0.7);
   --btn-bg-color: #222;
   --icon-size: 2.4rem;
+  --item-size: 3;
   --primary-trans: 300ms ease;
+  --small-trans: 200ms ease;
+
+  @media (max-width: 1241px) {
+    --item-size: 4;
+  }
+  
+  @media (max-width: 1241px) {
+    --item-size: 5;
+  }
 }
 
 * {

@@ -15,7 +15,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="network_link">
-          <a href="https://t.me/AleanderPuv" target="_blank">
+          <a href="https://t.me/AlexanderPuv" target="_blank">
             <svg width="2.4rem" height="2.4rem" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <path d="m21.094 3.634-3.199 16.523s-.447 1.146-1.677.596l-4.551-3.575-2.92 2.727s-.227.177-.477.066l.559-5.066.019.016.012-.103s8.186-7.54 8.521-7.86c.336-.321.224-.39.224-.39.022-.39-.604 0-.604 0L6.154 13.626l-4.519-1.558s-.693-.252-.76-.802c-.067-.55.783-.848.783-.848l17.96-7.22s1.476-.664 1.476.436Z" fill="#fff"/>
             </svg>
