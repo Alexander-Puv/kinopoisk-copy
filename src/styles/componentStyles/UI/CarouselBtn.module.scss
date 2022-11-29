@@ -1,0 +1,19 @@
+.carouselBtn {
+  position: absolute;
+  top: 1.6rem;
+  bottom: 1.6rem;
+  width: 5.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+  
+  &.left {
+    left: 0;
+  }
+  &.right {
+    right: 0;
+    transform: rotate(180deg);
+  }
+}

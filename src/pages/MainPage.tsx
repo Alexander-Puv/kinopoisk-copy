@@ -11,13 +11,13 @@ const MainPage = () => {
         description={mainPromo.description}
         link={mainPromo.link}
       />
-      <Carousel title='Рекомендуем сериалы' link='/'>
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-        <div>Item 4</div>
-        <div>Item 5</div>
-        <div>Item 6</div>
+      <Carousel title='Фильмы для вас' link='/'>
+        <div><img src="https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234" alt="" /></div>
+        <div><img src="https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234" alt="" /></div>
+        <div><img src="https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234" alt="" /></div>
+        <div><img src="https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234" alt="" /></div>
+        <div><img src="https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234" alt="" /></div>
+        <div><img src="https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234" alt="" /></div>
       </Carousel>
     </main>
   )

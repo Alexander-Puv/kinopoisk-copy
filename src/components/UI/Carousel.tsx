@@ -1,6 +1,7 @@
-import React, { FC } from 'react'
+import React, { Children, cloneElement, FC, ReactNode, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import cl from '../../styles/componentStyles/UI/Carousel.module.scss'
+import CarouselBtn from './CarouselBtn'
 
 interface CarouselProps {
   children: React.ReactNode[],
@@ -9,6 +10,13 @@ interface CarouselProps {
 }
 
 const Carousel: FC<CarouselProps> = ({children, title, link}) => {
+  const [pages, setPages] = useState<ReactNode[]>([]);
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    setPages([...children])
+  }, [])
+
   return (
     <section className={cl.main_container}>
       <Link to={link} className={cl.title}>
@@ -18,13 +26,18 @@ const Carousel: FC<CarouselProps> = ({children, title, link}) => {
         </svg>
       </Link>
       <div className={cl.window}>
-        <ul className={cl.all_pages_container}>
-          {children.map((child, i) =>
+        <CarouselBtn setOffset={setOffset} offset={offset} />
+        <ul
+          className={cl.all_pages_container} 
+          style={{transform: `translateX(calc(${offset} * var(--item-size) * var(--item-width)))`}}
+        >
+          {pages.map((page, i) =>
             <li className={cl.item} key={i}>
-              {child}
+              {page}
             </li>
           )}
         </ul>
+        <CarouselBtn setOffset={setOffset} offset={offset} direction='right' />
       </div>
     </section>
   )

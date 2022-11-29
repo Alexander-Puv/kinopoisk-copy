@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-type setBool = (isAuth: boolean) => void
+type setBool = (isTrue: boolean) => void
 
 interface AppContextElements {
   isAuth: boolean,

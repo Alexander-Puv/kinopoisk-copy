@@ -12,11 +12,11 @@
   --primary-trans: 300ms ease;
   --small-trans: 200ms ease;
 
-  @media (max-width: 1241px) {
+  @media (min-width: 1241px) {
     --item-size: 4;
   }
   
-  @media (max-width: 1241px) {
+  @media (min-width: 1641px) {
     --item-size: 5;
   }
 }

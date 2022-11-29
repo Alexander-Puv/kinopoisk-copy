@@ -24,15 +24,30 @@
   }
 
   .window {
+    position: relative;
+    overflow-x: hidden;
     .all_pages_container {
+      position: relative;
       display: flex;
       padding: 1.6rem 0;
-      overflow: hidden;
+
+      --item-width: calc((100% - 12rem - .8rem * (var(--item-size) - 1)) / var(--item-size));
   
       .item {
-        width: calc((100% - 12rem - .8rem * (var(--item-size) - 1)) / var(--item-size));
-        height: 56.25%; // ????????
+        position: relative;
+        min-width: var(--item-width);
         margin-left: .8rem;
+        cursor: pointer;
+
+        div {
+          position: relative;
+          padding-bottom: 56.25%; // ????????
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+        }
   
         &:first-child {
           margin-left: 0;
@@ -42,7 +57,7 @@
       &::before,
       &::after {
         content: "";
-        width: 6rem;
+        min-width: 6rem;
       }
     }
   }
