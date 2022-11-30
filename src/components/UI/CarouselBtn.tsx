@@ -5,10 +5,10 @@ interface CarouselButtonProps {
   direction?: 'left' | 'right',
   offset: number,
   setOffset: (num: number) => void,
+  maxOffset?: number
 }
 
-const CarouselBtn: FC<CarouselButtonProps> = ({direction = 'left', offset, setOffset}) => {
-  console.log(offset);
+const CarouselBtn: FC<CarouselButtonProps> = ({direction = 'left', offset, setOffset, maxOffset = 0}) => {
   const changeOffset = () => {
     direction === 'left' ?
       setOffset(offset !== 0 ? offset + 1 : offset)
@@ -18,7 +18,8 @@ const CarouselBtn: FC<CarouselButtonProps> = ({direction = 'left', offset, setOf
 
   return (
     <button
-      className={`${cl.carouselBtn} ${direction === 'left' ? cl.left : cl.right}`}
+      className={`${cl.carousel_btn} ${direction === 'left' ? cl.left : cl.right}`}
+      style={direction === 'left' ? (offset === 0 ? {display: 'none'} : {}) : (offset === maxOffset * -1 ? {display: "none"} : {})}
       onClick={changeOffset}
     >
       <svg width="1.7rem" height="3.6rem" viewBox="0 0 17 36" fill="none" xmlns="http://www.w3.org/2000/svg">

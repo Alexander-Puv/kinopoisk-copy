@@ -1,12 +1,13 @@
-.carouselBtn {
+.carousel_btn {
   position: absolute;
   top: 1.6rem;
-  bottom: 1.6rem;
   width: 5.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
   cursor: pointer;
+  transition: var(--primary-trans);
   z-index: 1;
   
   &.left {

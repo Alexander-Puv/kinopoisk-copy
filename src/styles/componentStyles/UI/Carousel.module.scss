@@ -26,12 +26,19 @@
   .window {
     position: relative;
     overflow-x: hidden;
+
+    --item-width: calc((100% - 12rem - .8rem * (var(--item-size) - 1)) / var(--item-size));
+    /* --item-height: calc(((100vw - 12rem - 1.6rem * (var(--item-size) - 1)) / var(--item-size) * 9 / 16));
+
+    button {
+      height: var(--item-height);
+    } */
+    
     .all_pages_container {
       position: relative;
       display: flex;
       padding: 1.6rem 0;
-
-      --item-width: calc((100% - 12rem - .8rem * (var(--item-size) - 1)) / var(--item-size));
+      transition: var(--carousel-trans);
   
       .item {
         position: relative;
@@ -59,6 +66,10 @@
         content: "";
         min-width: 6rem;
       }
+    }
+
+    &:hover button {
+      opacity: 1;
     }
   }
 

@@ -1,6 +1,7 @@
 import Carousel from '../components/UI/Carousel'
 import PromoBlock from '../components/UI/PromoBlock'
 import mainPromo from '../assets/promo/mainPromo'
+import CarouselItem from '../components/UI/CarouselItem'
 
 const MainPage = () => {
   return (
@@ -12,12 +13,14 @@ const MainPage = () => {
         link={mainPromo.link}
       />
       <Carousel title='Фильмы для вас' link='/'>
-        <div><img src="https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234" alt="" /></div>
-        <div><img src="https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234" alt="" /></div>
-        <div><img src="https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234" alt="" /></div>
-        <div><img src="https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234" alt="" /></div>
-        <div><img src="https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234" alt="" /></div>
-        <div><img src="https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234" alt="" /></div>
+        <CarouselItem img='https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234' />
+        <CarouselItem img='https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234' />
+        <CarouselItem img='https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234' />
+        <CarouselItem img='https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234' />
+        <CarouselItem img='https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234' />
+        <CarouselItem img='https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234' />
+        <CarouselItem img='https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234' />
+        <CarouselItem img='https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234' />
       </Carousel>
     </main>
   )

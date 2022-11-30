@@ -9,8 +9,9 @@
   --btn-bg-color: #222;
   --icon-size: 2.4rem;
   --item-size: 3;
-  --primary-trans: 300ms ease;
-  --small-trans: 200ms ease;
+  --primary-trans: .3s ease;
+  --small-trans: .2s ease;
+  --carousel-trans: .7s cubic-bezier(0.5, 0, 0.1, 1);
 
   @media (min-width: 1241px) {
     --item-size: 4;
