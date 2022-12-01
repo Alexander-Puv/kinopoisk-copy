@@ -1,6 +1,6 @@
 import React, { FC, ReactNode, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import cl from '../../styles/componentStyles/UI/Carousel.module.scss'
+import cl from '../../../styles/componentStyles/UI/Carousel/Carousel.module.scss'
 import CarouselBtn from './CarouselBtn'
 
 interface CarouselProps {
@@ -12,6 +12,7 @@ interface CarouselProps {
 const Carousel: FC<CarouselProps> = ({children, title, link}) => {
   const [pages, setPages] = useState<ReactNode[]>([]);
   const [offset, setOffset] = useState(0);
+  console.log(offset);
 
   useEffect(() => {
     setPages([...children])
@@ -29,7 +30,7 @@ const Carousel: FC<CarouselProps> = ({children, title, link}) => {
         <CarouselBtn setOffset={setOffset} offset={offset} maxOffset={1} />
         <ul
           className={cl.all_pages_container} 
-          style={{transform: `translateX(calc(${offset} * var(--item-size) * var(--item-width)) + 12rem)`}}
+          style={{transform: `translateX(calc(${offset} * var(--item-size) * var(--item-width)))`}}
         >
           {pages.map((page, i) =>
             <li className={cl.item} key={i}>

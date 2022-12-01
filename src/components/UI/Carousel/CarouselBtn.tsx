@@ -1,5 +1,5 @@
 import { FC } from "react"
-import cl from '../../styles/componentStyles/UI/CarouselBtn.module.scss'
+import cl from '../../../styles/componentStyles/UI/Carousel/CarouselBtn.module.scss'
 
 interface CarouselButtonProps {
   direction?: 'left' | 'right',

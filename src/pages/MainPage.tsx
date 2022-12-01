@@ -1,7 +1,7 @@
-import Carousel from '../components/UI/Carousel'
+import Carousel from '../components/UI/Carousel/Carousel'
 import PromoBlock from '../components/UI/PromoBlock'
 import mainPromo from '../assets/promo/mainPromo'
-import CarouselItem from '../components/UI/CarouselItem'
+import CarouselItem from '../components/UI/Carousel/CarouselItem'
 
 const MainPage = () => {
   return (
