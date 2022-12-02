@@ -9,6 +9,7 @@ interface AppContextElements {
   setIsSubscribed: setBool,
   isPromoBlock: boolean,
   setIsPromoBlock: setBool,
+  itemSize: number,
 }
 
 export const AppContext = createContext<AppContextElements | null>(null);

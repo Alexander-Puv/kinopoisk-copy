@@ -2,10 +2,13 @@ import Carousel from '../components/UI/Carousel/Carousel'
 import PromoBlock from '../components/UI/PromoBlock'
 import mainPromo from '../assets/promo/mainPromo'
 import CarouselItem from '../components/UI/Carousel/CarouselItem'
+import { Helmet } from 'react-helmet'
+import { movies } from '../data/movies'
 
 const MainPage = () => {
   return (
     <main className='page main_page'>
+      <Helmet title='Фильмы и сериалы смотреть онлайн в хорошем качестве по подписке — Кинопоиск' />
       <PromoBlock
         img={mainPromo.img}
         logo={mainPromo.logo}
@@ -13,14 +16,9 @@ const MainPage = () => {
         link={mainPromo.link}
       />
       <Carousel title='Фильмы для вас' link='/'>
-        <CarouselItem img='https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234' />
-        <CarouselItem img='https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234' />
-        <CarouselItem img='https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234' />
-        <CarouselItem img='https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234' />
-        <CarouselItem img='https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234' />
-        <CarouselItem img='https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234' />
-        <CarouselItem img='https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234' />
-        <CarouselItem img='https://avatars.mds.yandex.net/get-ott/223007/2a0000016ef582738499de0b4659f68750eb/375x234' />
+        {movies.map(movie =>
+          <CarouselItem img={movie.img} key={movie.id} />
+        )}
       </Carousel>
     </main>
   )

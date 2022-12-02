@@ -1,12 +1,14 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 
 interface CarouselItemProps {
-  img: string
+  img: string,
 }
 
 const CarouselItem: FC<CarouselItemProps> = ({img}) => {
   return (
-    <div><img src={img} alt="" /></div>
+    <div>
+      <img src={img} alt="" />
+    </div>
   )
 }
 

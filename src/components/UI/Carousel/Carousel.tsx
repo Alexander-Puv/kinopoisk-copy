@@ -12,7 +12,6 @@ interface CarouselProps {
 const Carousel: FC<CarouselProps> = ({children, title, link}) => {
   const [pages, setPages] = useState<ReactNode[]>([]);
   const [offset, setOffset] = useState(0);
-  console.log(offset);
 
   useEffect(() => {
     setPages([...children])
