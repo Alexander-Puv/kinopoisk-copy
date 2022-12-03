@@ -8,7 +8,10 @@ import { movies } from '../data/movies'
 const MainPage = () => {
   return (
     <main className='page main_page'>
-      <Helmet title='Фильмы и сериалы смотреть онлайн в хорошем качестве по подписке — Кинопоиск' />
+      <Helmet
+        title='Фильмы и сериалы смотреть онлайн в хорошем качестве по подписке — Кинопоиск'
+        meta={[{'property': 'og:title', 'content': 'Фильмы и сериалы смотреть онлайн в хорошем качестве по подписке — Кинопоиск'}]}
+      />
       <PromoBlock
         img={mainPromo.img}
         logo={mainPromo.logo}
