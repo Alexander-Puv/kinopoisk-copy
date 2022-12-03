@@ -21,7 +21,7 @@ const PromoBlock: FC<IPromo> = ({img, logo, description, link}) => {
 
   return (
     <section className={cl.promo_block}>
-      <img src={img} alt="" onLoad={onLoad} className={cl.img} />
+      <img src={img} alt="" onLoad={onLoad} className={cl.img} loading='lazy' />
       <div className={cl.desc}>
         <div className={cl.desc__content}>
           <div className={cl.logo}>

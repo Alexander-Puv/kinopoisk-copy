@@ -23,16 +23,10 @@
     }
   }
 
-  .window {
+  /* .window {
     position: relative;
     overflow-x: hidden;
 
-    --item-width: calc((100% - 12rem - .8rem * (var(--item-size) - 1)) / var(--item-size));
-    /* --item-height: calc(((100vw - 12rem - 1.6rem * (var(--item-size) - 1)) / var(--item-size) * 9 / 16));
-
-    button {
-      height: var(--item-height);
-    } */
     
     .all_pages_container {
       position: relative;
@@ -40,38 +34,46 @@
       padding: 1.6rem 0;
       transition: var(--carousel-trans);
   
-      .item {
-        position: relative;
-        min-width: var(--item-width);
-        margin-left: .8rem;
-        cursor: pointer;
+      
+  } */
 
-        div {
-          position: relative;
-          padding-bottom: 56.25%; // ????????
-          img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-          }
-        }
-  
-        &:first-child {
-          margin-left: 0;
-        }
-      }
-  
-      &::before,
-      &::after {
-        content: "";
-        min-width: 6rem;
-      }
+  .scroll_container {
+    position: relative;
+    --item-width: calc((100% - 12rem - .8rem * (var(--item-size) - 1)) / var(--item-size));
+
+    [class ~= 'react-horizontal-scrolling-menu--item'] {
+      min-width: var(--item-width);
     }
 
-    &:hover button {
-      opacity: 1;
+    [class ~= 'react-horizontal-scrolling-menu--separator'] {
+      margin-left: .8rem;
+    }
+
+    .item {
+      position: relative;
+      cursor: pointer;
+  
+      div {
+        position: relative;
+        padding-bottom: 56.25%;
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  
+    &::before,
+    &::after {
+      content: "";
+      min-width: 6rem;
     }
   }
+
+&:hover button {
+  opacity: 1;
+}
 
   &:hover .title svg {
     opacity: .8;

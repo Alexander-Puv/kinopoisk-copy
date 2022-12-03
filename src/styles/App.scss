@@ -67,6 +67,10 @@ html {
   flex-direction: column;
 }
 
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
 @media (min-width: 1444px) {
   html {
     font-size: .694444vw;
