@@ -29,7 +29,6 @@ const Carousel: FC<CarouselProps> = ({children, title, link}) => {
         <ScrollMenu
           LeftArrow={<CarouselBtn />}
           RightArrow={<CarouselBtn direction='right' />}
-          onScroll={e => console.log(e)}
         >
           {pages.map((page, i) =>
             <li className={cl.item} key={i}>

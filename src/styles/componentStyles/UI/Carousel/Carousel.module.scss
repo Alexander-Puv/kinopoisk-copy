@@ -23,22 +23,9 @@
     }
   }
 
-  /* .window {
-    position: relative;
-    overflow-x: hidden;
-
-    
-    .all_pages_container {
-      position: relative;
-      display: flex;
-      padding: 1.6rem 0;
-      transition: var(--carousel-trans);
-  
-      
-  } */
-
   .scroll_container {
     position: relative;
+    padding: 1.6rem 0;
     --item-width: calc((100% - 12rem - .8rem * (var(--item-size) - 1)) / var(--item-size));
 
     [class ~= 'react-horizontal-scrolling-menu--item'] {
@@ -69,11 +56,12 @@
       content: "";
       min-width: 6rem;
     }
+
+    &:hover button {
+      opacity: 1;
+    }
   }
 
-&:hover button {
-  opacity: 1;
-}
 
   &:hover .title svg {
     opacity: .8;
