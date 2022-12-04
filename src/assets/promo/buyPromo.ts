@@ -1,4 +1,4 @@
-import { IPromo } from "../../types/IPromoBlock"
+import IPromo from "../../types/IPromoBlock"
 
 const mainPromoBlock: IPromo = {
   img: 'https://avatars.mds.yandex.net/get-ott/1648503/2a00000183f93bfdc8f9b7d7ece8f3e1af9a/1747x982',

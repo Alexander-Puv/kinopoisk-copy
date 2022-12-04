@@ -1,4 +1,4 @@
-export interface IPromo {
+export default interface IPromo {
   img: string,
   logo: string,
   description: string,

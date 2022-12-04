@@ -38,15 +38,52 @@
 
     .item {
       position: relative;
+      min-height: 100%;
+      display: flex;
       cursor: pointer;
   
-      div {
+      
+      .carousel_item,
+      .show_all_btn {
+        display: flex;
+        flex: 1;
+      }
+      .carousel_item {
         position: relative;
-        padding-bottom: 56.25%;
-        img {
-          position: absolute;
-          width: 100%;
-          height: 100%;
+        
+        .img {
+          position: relative;
+          flex: 1;
+          padding-bottom: 56.25%;
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .show_all_btn {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5rem;
+
+          span {
+            width: 6rem;
+            height: 6rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--btn-bg);
+            border-radius: 50%;
+            transition: var(--primary-trans);
+          }
+
+          &:hover span {
+            background-color: var(--btn-bg-hover);
+            border-radius: 25%;
+          }
         }
       }
     }

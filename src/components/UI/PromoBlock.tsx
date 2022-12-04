@@ -1,7 +1,7 @@
 import React, { FC, useContext, useEffect, useState } from 'react'
 import { AppContext } from '../../context/context';
 import cl from '../../styles/componentStyles/UI/PromoBlock.module.scss'
-import { IPromo } from '../../types/IPromoBlock';
+import IPromo from '../../types/IPromoBlock';
 
 const PromoBlock: FC<IPromo> = ({img, logo, description, link}) => {
   const [isImgLoaded, setIsImgLoaded] = useState(false);

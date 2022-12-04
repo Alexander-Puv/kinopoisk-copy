@@ -3,7 +3,7 @@ import PromoBlock from '../components/UI/PromoBlock'
 import mainPromo from '../assets/promo/mainPromo'
 import CarouselItem from '../components/UI/Carousel/CarouselItem'
 import { Helmet } from 'react-helmet'
-import { movies } from '../data/movies'
+import { selections } from '../data/movies'
 
 const MainPage = () => {
   return (
@@ -18,11 +18,17 @@ const MainPage = () => {
         description={mainPromo.description}
         link={mainPromo.link}
       />
-      <Carousel title='Фильмы для вас' link='/'>
-        {movies.map(movie =>
-          <CarouselItem img={movie.img} key={movie.id} />
-        )}
-      </Carousel>
+      {selections.map((selection, index) =>
+        <Carousel title={selection.title} link='/' key={index}>
+          {selection.movies.map(movie =>
+            movie.id < 12 ?
+              <CarouselItem img={movie.img} key={movie.id} />
+            : movie.id === 12 ?
+              <CarouselItem key={movie.id} />
+            : <></>
+          )}
+        </Carousel>
+      )}
     </main>
   )
 }

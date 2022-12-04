@@ -67,7 +67,7 @@
       text-align: center;
       white-space: nowrap;
       font-size: 1.5rem;
-      background-color: var(--btn-bg-color);
+      background-color: var(--btn-bg);
       border-radius: .4rem;
       transition: transform var(--primary-trans);
       will-change: transform;
@@ -86,7 +86,7 @@
       }
 
       &:hover {
-        background-color: var(--gray);
+        background-color: var(--btn-bg-hover);
         transform: scale(1.05);
       }
     }

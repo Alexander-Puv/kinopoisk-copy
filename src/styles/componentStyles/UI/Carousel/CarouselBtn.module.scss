@@ -1,6 +1,4 @@
 .carousel_btn {
-  // position: absolute;
-  // top: 1.6rem;
   width: 5.2rem;
   display: flex;
   align-items: center;
@@ -8,13 +6,8 @@
   opacity: 0;
   cursor: pointer;
   transition: var(--primary-trans);
-  // z-index: 1;
   
-  // &.left {
-  //   left: 0;
-  // }
   &.right {
-    // right: 0;
     transform: rotate(180deg);
   }
 }
