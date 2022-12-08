@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Link } from 'react-router-dom'
 import { noImg } from '../assets/noImg'
-import { HistoryRoute } from '../routing/routes'
+import { HistoryRoute } from '../routing/consts'
 import cl from '../styles/componentStyles/UserMenu.module.scss'
 import UserItem from './UI/UserItem'
 

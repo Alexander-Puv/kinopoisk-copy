@@ -2,7 +2,7 @@ import { useContext, useMemo, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { noImg } from '../assets/noImg';
 import { AppContext } from '../context/context';
-import { BuyRoute, ChannelsRoute, MainRoute, PersonalRoute, SportRoute } from '../routing/routes';
+import { BuyRoute, ChannelsRoute, MainRoute, PersonalRoute, SportRoute } from '../routing/consts';
 import cl from '../styles/componentStyles/Header.module.scss';
 import UserMenu from './UserMenu';
 
